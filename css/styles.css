@@ -1,0 +1,398 @@
+/* ==============================
+		BASE
+=================================*/
+
+html {
+    font-size: 87.5%;
+    /* 14px */
+    line-height: 1.5;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+
+/* ==============================
+		COMMUNS
+=================================*/
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.hidden-text {
+    font-size: 0;
+    margin: 0;
+    line-height: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #d43839;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+img {
+    display: block;
+}
+
+
+/* ==============================
+		HEADER
+=================================*/
+
+#page-header {
+    background: #f84242 url(../images/bg_header.jpg) no-repeat center bottom;
+    height: 50vh;
+    min-height: 200px;
+}
+
+#header-left {
+    float: left;
+}
+
+#header-right {
+    float: right;
+}
+
+#logo {
+    margin: 20px 0 0 70px;
+}
+
+#social-nav {
+    text-align: right;
+    margin: 40px 20px 0 0;
+}
+
+#social-nav li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#social-nav li a {
+    text-indent: 9999px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #d43839 url(../images/social.png) no-repeat;
+    border-radius: 2px;
+}
+
+#social-nav li a:hover {
+    background-color: #bb3031;
+}
+
+#social-nav li a#tw-btn {
+    background-position: -30px 0;
+}
+
+#social-nav li a#gp-btn {
+    background-position: -60px 0;
+}
+
+
+/* Formulaire */
+
+#search-form {
+    margin: 40px 20px 0 0;
+    font-size: 0;
+}
+
+#keywords {
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    width: 200px;
+    height: 30px;
+    padding: 6px 20px;
+    color: #b21516;
+}
+
+#keywords::-webkit-input-placeholder {
+    color: #b21516;
+}
+
+#keywords:focus {
+    background: rgba(255, 255, 255, 0.8);
+    outline-color: #d43839;
+}
+
+#search-btn {
+    border: none;
+    background: #d43839 url(../images/loupe.png) no-repeat;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+#search-btn:hover {
+    background-position: -30px 0;
+}
+
+
+/* ==============================
+		NAV
+=================================*/
+
+#main-nav {
+    background: #d43839;
+}
+
+#main-nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 2.5rem;
+}
+
+#main-nav>ul>li:hover>a {
+    color: #f4b9b9;
+}
+
+
+/* 1er niveau */
+
+#main-nav>ul {
+    font-size: 0;
+    text-align: center;
+}
+
+#main-nav>ul>li {
+    display: inline-block;
+    font-size: 1.125rem;
+    vertical-align: top;
+    position: relative;
+}
+
+
+/* 2eme niveau */
+
+#main-nav>ul>li>ul {
+    position: absolute;
+    left: -9999px;
+    width: 200px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+#main-nav>ul>li:hover>ul {
+    left: 0;
+}
+
+#main-nav ul ul a {
+    border-top: 1px solid #f84242;
+    background-color: #d43839;
+    color: #f4b9b9;
+}
+
+#main-nav ul ul a:hover {
+    background: #f84242;
+    color: #fff;
+}
+
+
+/* ==============================
+		MAIN
+=================================*/
+
+#main {
+    background: url(../images/ombre.png) no-repeat center top;
+}
+
+
+/*      Services     */
+
+#services {
+    padding: 160px 0 80px;
+}
+
+#services-inner {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.service {
+    width: 33.33%;
+    padding: 0 20px 0 80px;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.service:nth-of-type(1) {
+    background: url(../images/bg_web.gif) no-repeat;
+}
+
+.service:nth-of-type(2) {
+    background: url(../images/bg_mobile.gif) no-repeat;
+}
+
+.service:nth-of-type(3) {
+    background: url(../images/bg_photo.gif) no-repeat;
+}
+
+.service h2 {
+    font-size: 1.75rem;
+    color: #9c9c9c;
+    letter-spacing: 0.075rem;
+    margin: 0.5em 0 0;
+}
+
+.service a {
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+
+/*      Porfolio     */
+
+#portfolio {
+    background: #e5e5e5;
+    padding: 100px 0 100px;
+}
+
+#portfolio-left {
+    float: left;
+    width: 33.33%;
+}
+
+#portfolio-right {
+    float: left;
+    width: 66.66%;
+    padding-left: 40px;
+}
+
+#portfolio-left h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+#portfolio-left h3 {
+    margin: 0;
+    color: #a7a7a7;
+    text-transform: uppercase;
+}
+
+#portfolio-left p {
+    margin-top: 0;
+}
+
+#portfolio-left a {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #f84242;
+    color: #fff;
+    border-radius: 4px;
+}
+
+#portfolio-left a:hover {
+    background: #d43839;
+    text-decoration: none;
+}
+
+#portfolio-right figure {
+    margin: 0;
+    position: relative;
+}
+
+#portfolio-right figcaption {
+    position: absolute;
+    top: calc(50% - 32px);
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#portfolio-right h3 {
+    display: inline-block;
+    margin: 0;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+
+/* ==============================
+		FOOTER
+=================================*/
+
+footer {
+    background: #f84242;
+    color: #fff;
+}
+
+#footer-inner {
+    padding: 30px 0;
+}
+
+.footer-col {
+    width: 33.33%;
+    float: left;
+}
+
+.footer-col:nth-child(1) {
+    padding: 0 40px 0 0;
+}
+
+.footer-col:nth-child(2) {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    padding: 0 40px;
+}
+
+.footer-col:nth-child(3) {
+    padding: 0 0 0 40px;
+}
+
+.footer-col h3 {
+    color: #dce2e5;
+    background: url(../images/puce.png) no-repeat left center;
+    padding-left: 30px;
+}
+
+.footer-col p {
+    font-size: 0.875rem;
+}
+
+.footer-col .item img {
+    float: left;
+}
+
+.footer-col .item p {
+    float: left;
+    width: calc(100% - 50px);
+    margin: 0 0 2em 10px;
+}
+
+.footer-col ul {
+    padding-left: 1rem;
+    font-size: 0.875rem;
+}
+
+.footer-col ul li {
+    margin-bottom: 1em;
+}
